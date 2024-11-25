@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>College Name</th>
+                <th>Year of Passing</th>
+                <th>Role Category</th>
+                <th>Exceptional Work</th>
+                <th>Resume</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each formData}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.contactNo}}</td>
+                <td>{{this.collegeName}}</td>
+                <td>{{this.yearOfPassing}}</td>
+                <td>{{this.roleCategory.join(', ')}}</td>
+                <td>{{this.exceptionalWork}}</td>
+                <td><a href="/uploads/{{this.resume}}" target="_blank">Download Resume</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

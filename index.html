@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>GPROBO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/gprobo.jpeg">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+ 
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/main.js"></script>
+
+
+ 
+  <style>
+  .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+
+    .card {
+     
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+
+    .card img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .cards .card h4 {
+  color: rgba(var(--heading-color-rgb), 0.8);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: justify;
+  padding: 0;
+  margin: 20px 0;
+  font-weight: 100px;
+}
+
+
+    .card:hover img {
+        transform: scale(1.1);
+    }
+
+  
+
+    .card .card-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #909397;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:justify;
+        padding: 10px;
+        font-size: 10px;
+        color: #000000;
+
+    }
+
+
+    .card:hover .card-content {
+        opacity: 1;
+    }
+
+
+    .card .card-content h4 {
+        color: #000000;
+        font-size: 17px;
+    }
+
+    .card-title {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 0px;
+  font-weight: bold;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+
+.card-title {
+  margin-top: 00px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a0a0ab9; /* Match the color with the card text color */
+}
+
+
+.portfolio-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* To align text below the image */
+  margin-left: 800px ; /* Adjust this value as needed for spacing */
+}
+
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.portfolio-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.portfolio-info {
+  text-align: center;
+}
+
+
+.full-width-iframe {
+width: 100%;
+height: 450px;
+border: 0;
+}
+
+
+.banner-title {
+    background-image: linear-gradient(43deg, #da0909 2%, #ff0101 54%, #000000 100%);
+    font-size: 45px;
+    font-weight: var(--bold);
+    text-align: center;
+    color: transparent;
+    line-height: 160px;
+    letter-spacing: -1.28px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 5px;
+    white-space: pre-line;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 100px;
+}
+
+
+.banner-decs{
+  align-items: center;
+}
+.banner-desc {
+    padding-top: 85px;
+    width: 750px;
+    font-size: 36px;
+    font-weight: var(--medium);
+    text-align: center;
+    color: #000000;
+    line-height: 0px;
+    letter-spacing: 2px;
+    padding-bottom: 0px;
+}
+
+
+/* Ensure the swiper wrapper and slides use flexbox to center content */
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-left: 48px;
+}
+
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* Make sure images are fluid and can be resized */
+.resize-img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto;   /* Maintains the aspect ratio */
+    width: auto;    /* Allows resizing the image */
+    margin: auto;   /* Centers the image within the slide */
+}
+
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+
+
+  .banner-title {
+    font-size: 30px;
+    line-height: 100px;
+    padding-right: 0;
+  }
+
+
+  .banner-desc {
+    padding-top: 100px;
+    width: 100%;
+    font-size: 24px;
+    padding-right: 0;
+    line-height: normal;
+  }
+
+
+  .full-width-iframe {
+    height: 300px;
+  }
+
+
+  .swiper-wrapper {
+    margin-left: 0;
+  }
+
+
+  .portfolio-content,
+  .card .card-content {
+    padding: 10px;
+  }
+
+
+  .card-title {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .portfolio .section-title span,
+    .portfolio .section-title h2 {
+      font-size: 24px;
+    }
+
+
+    .portfolio .section-title p,
+    .portfolio .section-title p1 {
+      font-size: 14px;
+    }
+
+
+    .portfolio-item {
+      margin-bottom: 20px;
+    }
+
+
+    .banner {
+      height: 300px; /* Reduced height for smaller screens */
+    }
+
+
+    .banner-title {
+      font-size: 30px;
+      line-height: 100px;
+    }
+
+
+    .banner-desc {
+      font-size: 24px;
+    }
+
+
+    .portfolio-info h4 {
+      font-size: 16px;
+    }
+
+
+    .portfolio-info p {
+      font-size: 14px;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .portfolio .section-title span,
+    .portfolio .section-title h2 {
+      font-size: 18px;
+    }
+
+
+    .portfolio .section-title p,
+    .portfolio .section-title p1 {
+      font-size: 12px;
+    }
+
+
+    .banner {
+      height: 200px; /* Further reduced height for very small screens */
+      padding: 10px;
+    }
+
+
+    .banner-title {
+      font-size: 18px;
+      line-height: 60px;
+
+    }
+
+
+    .banner-desc {
+      font-size: 14px;
+    }
+
+
+    .portfolio-info h4 {
+      font-size: 14px;
+    }
+
+
+    .portfolio-info p {
+      font-size: 12px;
+    }
+
+    
+        .x-icon {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            fill: #000000; /* Color for "X" */
+            transition: fill 0.3s ease;
+        }
+        .x-icon:hover {
+            fill: red ;
+        }
+  }
+</style>
+
+
+</head>
+
+
+<body>
+ 
+  <header id="header" class="header fixed-top">
+    <div class="branding">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="img/gprobo logo.png" class="nav-log" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="./index.html" class="">Home</a></li>
+                <li><a href="./robo.html">Product</a></li>
+                <li class="dropdown">
+                  <a href=""><span>Gallery</span><span class="arrow">&#9662;</span></a></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="./images.html">Images</a></li>
+                      <li><a href="./gallery.html">Videos</a></li>
+    
+                  </ul>
+                </li>           
+             </li>
+                <li><a href="careers.html">Career</a></li>
+                <li><a href="about.html">About Us</a> </li>
+                <li><a href="contact_us.html">Contact us</a></li>
+              </ul>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </div>
+  </header>
+
+
+  <main class="main">
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+
+      <img src="img/ROBO.jpg" class="img-fluid" alt="" data-aos="fade-in">
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-start">
+          <div class="col-lg-8">
+            <style>
+              .title {
+                  font-size: 36px;
+                  font-weight: bold;
+                  animation: bounceIn 5s ease;
+              }
+         
+              @keyframes bounceIn {
+                  0%, 20%, 40%, 60%, 80%, 100% {
+                      transform: translateY(0);
+                  }
+                  50% {
+                      transform: translateY(-20px);
+                  }
+              }
+          </style>
+         
+          <h2 class="title">Welcome To <span class="red-text">GPROBO</span></h2>
+            <p>Serving with precision, powered by technology</p>
+            <!-- <a href="#about" class="btn-get-started">Get Started</a> -->
+          </div>
+        </div>
+      </div>
+
+
+    </section><!-- /Hero Section -->
+
+
+   
+
+
+    <!-- Portfolio Section -->
+    <section id="product" class="portfolio section" style="padding-bottom: 0; margin-bottom: 20px">
+      
+      <div class="container">
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Product</h2>
+            </div>
+
+             <!-- Banner section -->
+            <div class="banner-title move-animate"><strong>AI Delivery Robo : Your Reliable Assistance</strong></div>
+       
+ 
+            <div class="row gy-4 " data-aos="fade-up" data-aos-delay="200">
+              <!-- Image column -->
+             
+
+              <section class="col-lg-8 col-md-8 banner" style="background: url() no-repeat center; background-size: cover;">
+                <div class='main-container banner-container'>
+                    <div class='banner-text-container'>
+                      <ul>
+                        <li>Versatile Solution: Boosts productivity in personal and professional spaces.</li>
+                        <li>Personal Assistance: Manages calendars, reminders, and chores.</li>
+                        <li>Industrial Use:
+                          <ul>
+                            <li>Healthcare: Supports staff with supplies, patient monitoring, and routine checks.</li>
+                            <li>Hospitality: Acts as a server, enhancing service and reducing staff load.</li>
+                          </ul>
+                        </li>
+                        <li>Efficiency: Automates repetitive tasks, ensuring consistency and accuracy.</li>
+                        <li>Broad Utility: Valuable in homes, offices, hospitals, and hospitality settings.</li>
+                      </ul>
+                      
+                    </div>
+                </div>
+              </section>
+
+              <div class="col-lg-4 col-md-4 isotope-item filter-app" style="display: flex; flex-direction: column; justify-content: center; align-items: center;" >
+                  <img src="img/HUMANOID_ROBO.png" class="" alt="" style="width: 425px; height: 425px;">
+                  <div class="portfolio-info">
+                      <h4>GPROBO</h4>
+                      <p>Your Reliable Assistance Robot</p>
+                      <a href="img/HUMANOID_ROBO.png"  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                      
+                      <a href="robo.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+              </div>    
+            </div>
+
+          </div>
+      </div>
+    </section>
+     
+    <!-- Cards Section -->
+    <section id="cards" class="cards section"  style="padding-top: 0">
+      <div class="container section-title" data-aos="fade-up">
+          <h2 class="">Uses<br></h2>
+      </div>
+
+
+      <div class="container">
+        <div class="row no-gutters row justify-content-center">
+     
+          <div class="col-lg-3 col-md-8 card align-items-center justify-content-center active" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/1.jpg" alt="Card Image">
+            <div class="card-content">
+              <span>Efficient Delivery</span>
+              <h4>Robo offers seamless dining with Robo's cutting-edge delivery service. With automatic table prioritization, enjoy swift and hassle-free handling of multiple orders, ensuring prompt delivery right to your table.</h4>
+            </div>
+          </div>
+     
+          <div class="col-lg-3 col-md-8 card justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/2.jpg" alt="Card Image">
+            <div class="card-content">
+              <span>Guided Navigation</span>
+              <h4>Robo offers smart guidance to lead customers directly to their designated table. Additionally, it provides a range of additional services through voice control, enhancing the overall dining experience.</h4>
+            </div>
+          </div>
+     
+          <div class="col-lg-3 col-md-8 card justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/3.jpg" alt="Card Image">
+           
+            <div class="card-content">
+              <span style="text-align: center;">Exclusive Themed Services </span>
+              <h4>Robo offers exclusive themed services for birthdays, festivals, weddings, and other occasions, adding surprise, warmth, and intimacy to the dining experience, ensuring uniqueness and unforgettable moments for customers.</h4>
+            </div>
+          </div>
+     
+          <div class="col-lg-3 col-md-8 card" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/4.png" alt="Card Image">
+            <div class="card-content">
+              <span style="text-align: center;">Smart Obstacle Avoidance </span>
+              <h4>Robo's advanced multi-sensor fusion enables precise centimeter-level positioning and effective 3D obstacle avoidance, ensuring smooth operation in diverse environments.</h4>
+            </div>
+          </div>
+     
+          <div class="col-lg-3 col-md-8 card justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/120.png" alt="Card Image">
+            <div class="card-content">
+              <span style="text-align: center;">Versatile Marketing Strategies</span>
+              <h4>Robo smoothly transitions between front desk reception and delivery duties, providing extensive marketing services to boost overall customer satisfaction and engagement.</h4>
+            </div>
+          </div>
+     
+          <div class="col-lg-3 col-md-8 card justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="./img/6.jpg" alt="Card Image">
+            <div class="card-content">
+              <span>Collection Mode </span>
+              <h4>Robo excels in plate recycling, with a tray holding 10KG per layer and 20KG total. Efficiently clears tableware from multiple tables.</h4>
+            </div>
+          </div>
+     
+        </div>
+      </div>
+     
+
+
+<!-- Clients Section -->
+<section id="Supported" class="">
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="section-header">Supported by</h2>
+</div>
+<section id="clients" class="clients section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-lg-2 col-md-3 card align-items-center justify-content-center support-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="./img/clients/nidhi_prayas-removebg-preview.png" alt="Nidhi Prayas Logo" class="img-fluid">
+      </div>
+      <!-- Card 2 -->
+      <div class="col-lg-2 col-md-3 card align-items-center justify-content-center support-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="./img/clients/start-up-1-1024x420.png" alt="Startup India Logo" class="img-fluid">
+      </div>
+      <!-- Card 3 -->
+      <div class="col-lg-2 col-md-3 card align-items-center justify-content-center support-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="./img/riidllogo1.png" alt="RiiDL Logo" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+
+    <!-- <div class="container">
+      <img src="image.png" alt="Humanoid Food Delivery Robot">
+      <h1>Humanoid Food Delivery Robot</h1>
+      <h2>Your Reliable Assistance Robot</h2>
+    </div> -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Solution</h2>
+        
+      </div>
+      <!-- End Section Title -->
+   
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" >
+            <div class="service-item position-relative " style="border-radius: 30px">
+              <div class="icon">
+                <img src="./img/sol1.png" alt="Description of Image 1">
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Efficiency Boost 2-3 times</h3>
+              </a>
+            </div>
+          </div>
+   
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative" style="border-radius: 30px">
+              <div class="icon">
+                <img src="./img/sol2.png" alt="Description of Image 2">
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Accuracy Rate 99.99%</h3>
+              </a>
+            </div>
+          </div>
+   
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative" style="border-radius: 30px">
+              <div class="icon">
+                <img src="./img/sol3.png" alt="Description of Image 3">
+              </div>
+              <a href="#services" class="stretched-link">
+                <h3>Cost Reduction 50% +</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+   
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section">
+
+
+      <img src="img/cert img3.png" alt="">
+
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>CERTIFICATE OF RECOGNITION</h3>
+              <p></p>
+              <a class="cta-btn" href="certificate.html">CERTIFICATES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section><!-- /Call To Action Section -->
+
+
+   
+   
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+    
+      </div><!-- End Section Title -->
+
+
+      <div class="container">
+
+
+        <div class="row justify-content-center">
+
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="img/team/Ajay.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Ajay Maurya</h4>
+                <span>FOUNDER, CEO & CTO</span>
+                <p>
+                 
+                </p>
+                <div class="social">
+                  <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                  <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                  <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                  <a href="https://www.linkedin.com/in/ajay-maurya-025b5019a/"><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="img/team/abdul.jpeg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Abdul Rehman Shah</h4>
+                <span>Co-FOUNDER & COO</span>
+                <p>
+                 
+                </p>
+               <div class="social">
+                  <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                  <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                  <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                  <a href=""><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section><!-- /Team Section -->
+
+
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in touch with us today for any inquiries or assistance!</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row d-flex align-items-stretch">
+          <!-- Google Map on the Left Side -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15083.123922928999!2d72.8962449!3d19.0733649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6a3dfcbd54babf9d%3A0xf4b752d83f3034de!2sGPROBO!5e0!3m2!1sen!2sin!4v1714561908340!5m2!1sen!2sin"
+                class="full-width-iframe"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+    
+          <!-- Contact Information on the Right Side -->
+          <div class="col-lg-6 d-flex flex-column justify-content-between">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Room No. 520, Bhaskarachraya Building, Somaiya Vidyavihar, Mumbai, Maharashtra 400077</p>
+              </div>
+            </div>
+    
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+91 8934935753</p>
+              </div>
+            </div>
+    
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>gprobo.ai@gmail.com</p>
+              </div>
+            </div>
+          </div><!-- End Contact Information -->
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+
+  </main>
+
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top text-center "> <!-- Added 'text-center' class to center-align main content -->
+      <div class="row gy-3 justify-content-center">
+        <div class="col-lg-4 col-md-6 ">
+          <div class="footer-about">
+            <a href="index.html" class="logo">GPROBO</a>
+            <div class="footer-contact pt-3">
+              <p>Room No.520, Bhaskarachraya Building</p>
+              <p>Somaiya Vidyavihar, Mumbai, 400077</p>
+              <p><i class="bi bi-telephone"></i> <strong>Phone:</strong> <span>+91 8934935753</span></p>
+              <p><i class="bi bi-envelope"></i> <strong>Email:</strong> <span>gprobo.ai@gmail.com</span></p>
+            </div>
+            <div class="social-links d-flex justify-content-center mt-4"> <!-- Center-align social links -->
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/gprobo/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="company.html">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  
+    <div class="container text-center mt-4"> 
+      <p>© <span>Copyright 2024</span> <strong class="px-1">GPROBO</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="./teams.html">GPROBO TEAM</a>
+      </div>
+    </div>
+  
+  </footer>
+ 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+
+
+  <div id="leave_msg_container">
+    <style>
+      .custom-iframe {
+    width: 200%; /* Make the iframe responsive */
+    max-width: 500px; /* Set maximum width */
+    height: 300px; /* Adjust height */
+    border: none; /* Optional: Remove border */
+}
+
+      #leave_msg_href {
+      width: 105px;
+      height: 105px;
+      display: block;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+      background-size: 100%;
+      right: 58px;
+      bottom: 30px;
+      z-index: 1000;
+    }
+
+
+      #leave_msg_href_but {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        bottom: 0;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        border-radius: 15px;
+        background: linear-gradient(to right, #8a3737, #f71010);
+      }
+
+
+      @media (max-width: 576px) {
+        #leave_msg_href {
+          width: 90px;
+          height: 90px;
+          background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+          background-size: 100%;
+        }
+
+
+        #leave_msg_href_but {
+          height: 26px;
+          border-radius: 13px;
+          line-height: 26px;
+          font-size: 10px;
+        }
+      }
+
+      .section-header {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.support-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 30px; /* Horizontal margin to create spacing */
+    background-color: transparent;
+    border: none;
+}
+
+.support-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+ 
+    </style>
+          <div data-agl-cvt="1" onclick="qutoe_now_click()" id="leave_msg_href">
+      <div id="leave_msg_href_but" >CONTACT US</div>
+    </div>
+   
+  </div>
+  <script src="contact.js"></script>
+ 
+
+
+
+
+</body>
+
+
+</html>
+

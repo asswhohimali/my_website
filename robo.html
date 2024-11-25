@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>GPROBO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/gprobo.jpeg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <script type="text/javascript" src="static/demo/js/jquery.min.js"></script>
+  <script type="text/javascript" src="static/demo/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="static/demo/js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/demo/css/common.css">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/bootstrapad05.css?v=001">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/header6e87.css?v=20240531">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/footer4118.css?v=20240530">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/user-buttonab82.css?v=3.4.2">
+  <link rel="stylesheet" type="text/css" href="static/demo/css/tailwind3cf6.css?v=0713">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/main.js"></script>
+
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<meta name="viewport"
+  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="static/demo/css/public.css">
+<link rel="stylesheet" type="text/css" href="static/demo/css/loading.css" />
+<link rel="stylesheet" type="text/css" href="static/demo/css/lucki-pro7289.css?v=20240429" />
+<link rel="stylesheet" type="text/css" href="static/demo/css/frame-animate.css" />
+<link rel="stylesheet" type="text/css" href="static/demo/css/video.css" />
+<link rel="stylesheet" href="static/demo/css/product-faq.css">
+
+<link rel="stylesheet" href="static/demo/css/swiper-bundle.min.css">
+<script>
+  function isMobile() {
+    const flag = navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i);
+    return flag;
+  }
+</script>
+
+</head>
+
+<body>
+  <link rel="stylesheet" href="static/demo/css/headercss92cb.css?v=20240529" />
+  <header class="header">
+    <style>
+      /* GLOBALS */
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+
+      .wrapper-dropdown-3 {
+        position: relative;
+        margin: 0 auto;
+        padding: 0 16px;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+        color: rgba(255, 255, 255, 0.8);
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+     
+      .wrapper-dropdown-3:after {
+        content: '';
+        display: inline-block;
+        height: 12px;
+        width: 17px;
+        background: url(static/demo/img/orioinstar_web_icon_btn_arrow_down_gray.png) no-repeat center;
+        background-size: cover;
+        position: relative;
+      }
+
+      .wrapper-dropdown-3 .dropdown {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #35363c;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+        /* border-radius: inherit;*/
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        font-weight: normal;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        list-style: none;
+        display: none;
+        /* Hiding */
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .wrapper-dropdown-3 .dropdown:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 100%;
+        right: 15px;
+        border-width: 0 6px 6px 6px;
+        border-style: solid;
+        border-color: #35363c transparent;
+      }
+
+      .wrapper-dropdown-3 .dropdown:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 100%;
+        right: 13px;
+        border-width: 0 8px 8px 8px;
+        border-style: solid;
+        border-color: #35363c transparent;
+      }
+
+      .wrapper-dropdown-3 .dropdown li {
+        text-align: center;
+        padding-left: 0;
+        padding: 6px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.8);
+        /* border-bottom: 1px solid #e6e8ea;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,1);*/
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        font-size: 14px;
+      }
+
+
+      .wrapper-dropdown-3 .dropdown li i {
+        color: inherit;
+      }
+
+      .wrapper-dropdown-3 .dropdown li:first-of-type {
+        border-radius: 0px;
+      }
+
+      .wrapper-dropdown-3 .dropdown li:last-of-type {
+        border: none;
+        border-radius: 0 0 16px 16px;
+      }
+
+      /* Hover state */
+
+      .wrapper-dropdown-3 .dropdown li:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        /* border-radius: 16px; */
+      }
+
+      /* Active state */
+
+      .wrapper-dropdown-3.active .dropdown {
+        display: inline-block;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 10px 0px;
+      }
+
+      /* No CSS3 support */
+
+      .no-opacity .wrapper-dropdown-3 .dropdown,
+      .no-pointerevents .wrapper-dropdown-3 .dropdown {
+        display: none;
+        opacity: 1;
+        /* If opacity support but no pointer-events support */
+        pointer-events: auto;
+        /* If pointer-events support but no pointer-events support */
+      }
+
+      .no-opacity .wrapper-dropdown-3.active .dropdown,
+      .no-pointerevents .wrapper-dropdown-3.active .dropdown {
+        display: block;
+      }
+
+      /* .span-lang {
+      padding-left: 5px;
+    } */
+
+      .span-placeholder {
+        display: inline-block;
+        /* width: 63px; */
+        /*   height: 32px;*/
+        line-height: 32px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        /* padding-left: 2px;
+        padding-right: 5px;*/
+        text-align: center;
+        /* vertical-align: text-bottom;*/
+      }
+
+      .banner-text-container  .p {
+        font-size: 1000px;
+      }
+
+      
+
+      .after-hide::after {
+        display: none !important;
+      }
+
+      @media screen and (min-width: 1926px) {
+        .span-placeholder {
+          font-size: 16px;
+        }
+      }
+
+      #im_chat_container {
+        right: 140px !important;
+      }
+
+       section,
+      .section {
+        color: var(--default-color);
+        background-color: rgb(211, 206, 206);
+        padding: 0px 0;
+        scroll-margin-top: 100px;
+        overflow: clip;
+      } 
+
+      .large-image {
+        width: 850px;
+        /* Adjust the width as needed */
+        height: 750px;
+        /* Maintain aspect ratio */
+        padding-top: 200px;
+        padding-bottom: 100px;
+      
+
+      }
+        ul {
+            list-style-type: disc; /* This sets the bullet points */
+            padding-left: 20px;    /* Indentation for the bullets */
+        }
+        strong {
+            font-weight: bold;      /* Makes the text bold */
+        }
+    </style>
+    <header id="header" class="header fixed-top">
+      <div class="branding">
+          <div class="container position-relative d-flex align-items-center justify-content-between">
+              <a href="index.html" class="logo d-flex align-items-center">
+                  <img src="img/gprobo logo.png" class="nav-log" alt="">
+              </a>
+              <nav id="navmenu" class="navmenu">
+                <ul>
+                  <li><a href="./index.html" class="">Home</a></li>
+                  <li><a href="./robo.html">Product</a></li>
+                  <li class="dropdown">
+                    <a href=""><span>Gallery</span><span class="arrow">&#9662;</span></a></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./images.html">Images</a></li>
+                        <li><a href="./gallery.html">Videos</a></li>
+      
+                    </ul>
+                  </li>           
+               </li>
+                  <li><a href="careers.html"><span>Career</span></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href=""><span>About Us </span><span class="arrow">&#9662;</span></a></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./company.html">Company Info</a></li>
+                        <li><a href="./certificate.html">Certificate</a></li>
+                        <li><a href="./teams.html">Teams</a></li>
+      
+                    </ul>
+                  </li>
+                  <li><a href="contact_us.html">Contact us</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+              </nav>
+          </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      </script>
+
+
+      <section class="banner">
+
+        <div class='main-container banner-container' style="background: url() no-repeat center;background-size: cover;">
+          <div class='banner-text-container'>
+            <h1 class="banner-desc">AI Delivery Robot <br> </h1>
+            <div class="banner-title move-animate">Your Reliable Assistance</div>
+            <div class="DESC abilities-desc">Meet the latest delivery robot, designed to revolutionize your food delivery experience. With advanced human-robot interaction capabilities, it can be easily controlled using voice commands for added convenience.
+              <ul>
+                <li><strong>Unique Functions:</strong>
+                    <ul>
+                        <li><strong>Guide Mode:</strong> Directs users to orders.</li>
+                        <li><strong>Cruise Mode:</strong> Navigates busy environments.</li>
+                    </ul>
+                </li>
+                <li><strong>Usability:</strong>
+                    <ul>
+                        <li>Effortless food delivery for modern lifestyles.</li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        
+
+        </div>
+        <div><img src="img/HUMANOID_ROBO.png" class="roboimg large-image" alt="Humanoid Robot"></div>
+
+      </section>
+
+
+
+     <!--<section class="abilities">
+        <div class="main-container  abilities-container">
+          <div class="text-container move-animate">
+            <div class="TITLE ">ROBO</div>
+            <div class="DESC abilities-desc">the latest delivery robot, is designed with advanced human-robot
+              interaction capabilities and can also be controlled using voice commands.
+              Featuring innovative functions such as Guide Mode, Cruise Mode, and many
+              other new features, Robo delivers an unparalleled food delivery experience.
+            </div>
+          </div>
+        </div>
+      </section>-->
+      <section class="intro bg-black"> 
+        <!-- <div class="main-container intro-container ">
+            <span class="LARGE-TITLE move-animate">GPROBO</span>
+        </div> -->
+        <div class="pic-right">
+          <div class="pic-right-top">
+            <div>
+              <video class="roboimg large-video" controls loop autoplay muted>
+                <source src="./img/robo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+          </div>
+          <div class="pro-pic">
+            <div class="pic-left">
+              <h1>Industry-leading
+                Dual SLAM Solution for Complete Coverage in All Scenarios
+              </h1>Robo utilizes advanced laser SLAM positioning and navigation technology, ensuring ease of operation
+              and high accuracy across
+              diverse environments. Our solutions deliver an exceptional user experience, consistently catering to
+              customer needs despite
+              variations in positioning technology. At GPRobo, we prioritize customer-centric service, adapting
+              seamlessly to meet the demands
+              of our clients.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="speci bg-black">
+        <div class="main-container speci-container">
+          <div class="speci-title">SPECIFICATION</div>
+          <div class="speci-list">
+            <div class="speci-item">
+              <div class="speci-item-title">General Parameters</div>
+              <div class="speci-item-list">
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Overall Size</div>
+                  <div class="speci-item-list-item-value">L:430 mm × W:350 mm × H:1485 mm</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Net Weight</div>
+                  <div class="speci-item-list-item-value">30 Kg</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Color</div>
+                  <div class="speci-item-list-item-value">white</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Screen Size</div>
+                  <div class="speci-item-list-item-value">10-inch, Touch Screen, 1024×600 pixel</div>
+                </div>
+              </div>
+            </div>
+            <div class="speci-item-line"></div>
+            <div class="speci-item">
+              <div class="speci-item-title">Loading Capability</div>
+              <div class="speci-item-list">
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Loading Space</div>
+                  <div class="speci-item-list-item-value">The trays are adjustable, each with dimensions of 443mm x
+                    295mm. The height of each tray is 40mm, with a space between the first tray and the bottom tray is
+                    280mm.</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Single Tray Load</div>
+                  <div class="speci-item-list-item-value">Max 10 Kg</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Total Load</div>
+                  <div class="speci-item-list-item-value">Max 20 Kg</div>
+                </div>
+              </div>
+            </div>
+            <div class="speci-item-line"></div>
+            <div class="speci-item">
+              <div class="speci-item-title">Mobility Metrics</div>
+              <div class="speci-item-list">
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Cruising Speed</div>
+                  <div class="speci-item-list-item-value">0.5 ~ 1.2 m/s (adjustable)</div>
+                </div>
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Cruising Time</div>
+                  <div class="speci-item-list-item-value">Max 10 Kg</div>
+                </div>
+              </div>
+            </div>
+            <div class="speci-item-line"></div>
+            <div class="speci-item">
+              <div class="speci-item-title">Charging Information</div>
+              <div class="speci-item-list">
+                <div class="speci-item-list-item">
+                  <div class="speci-item-list-item-key">Charging Time</div>
+                  <div class="speci-item-list-item-value">2h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <footer id="footer" class="footer position-relative">
+
+        <div class="container footer-top text-center "> <!-- Added 'text-center' class to center-align main content -->
+          <div class="row gy-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 ">
+              <div class="footer-about">
+                <a href="index.html" class="logo">GPROBO</a>
+                <div class="footer-contact pt-3">
+                  <p>Room No.520, Bhaskarachraya Building</p>
+                  <p>Somaiya Vidyavihar, Mumbai, 400077</p>
+                  <p><i class="bi bi-telephone"></i> <strong>:</strong> <span>+91 8934935753</span></p>
+                  <p><i class="bi bi-envelope"></i> <strong>:</strong> <span>gprobo.ai@gmail.com</span></p>
+                </div>
+                <div class="social-links d-flex justify-content-center mt-4"> <!-- Center-align social links -->
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/gprobo/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">About us</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container text-center mt-4">
+          <p>© <span>Copyright 2024</span> <strong class="px-1">GPROBO</strong> <span>All Rights Reserved</span></p>
+          <div class="credits">
+            Designed by <a href="">GPROBO TEAM</a>
+          </div>
+        </div>
+
+      </footer>
+
+
+      <div id="leave_msg_container">
+        <style>
+          #leave_msg_href {
+            width: 105px;
+            height: 105px;
+            display: block;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+            background-size: 100%;
+            right: 58px;
+            bottom: 30px;
+            z-index: 1000;
+          }
+
+
+          #leave_msg_href_but {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            bottom: 0;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            border-radius: 15px;
+            background: linear-gradient(to right, #8a3737, #f71010);
+          }
+
+          @media (max-width: 576px) {
+            #leave_msg_href {
+              width: 90px;
+              height: 90px;
+              background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+              background-size: 100%;
+            }
+
+            #leave_msg_href_but {
+              height: 26px;
+              border-radius: 13px;
+              line-height: 26px;
+              font-size: 10px;
+            }
+          }
+        </style>
+        <div data-agl-cvt="1" onclick="qutoe_now_click()" id="leave_msg_href">
+          <div id="leave_msg_href_but">CONTACT US</div>
+        </div>
+
+      </div>
+
+      <script src="js/main.js"></script>
+
+</body>
+
+</html>

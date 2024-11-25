@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="img/gprobo.jpeg" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+
+ 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+  <style>
+    /* GLOBALS */
+    .certificates-section {
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .certificates-section img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .form-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 35px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-main .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .tips {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .mail-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .icon-mail {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .mail-text {
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .check-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .check-label {
+        margin-right: 15px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .redmust {
+        color: red;
+    }
+
+    textarea {
+        resize: none;
+    }
+    .slider-container {
+  padding-top: 0px;
+  max-width: 850px; /* Adjust maximum width to match the image */
+  margin: 0 auto; /* Center the slider */
+  overflow: hidden;
+  position: relative;
+  background-color: #000; /* Set background color to match the image */
+  color: #fff; /* Set text color to white */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      const slideContainer = document.querySelector('.slides');
+
+      function moveSlide(n) {
+        currentIndex += n;
+
+        if (currentIndex >= totalSlides) {
+          currentIndex = 0;
+        } else if (currentIndex < 0) {
+          currentIndex = totalSlides - 1;
+        }
+
+        slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+      document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+
+      // Continuous sliding
+      let autoSlideInterval = setInterval(() => {
+        moveSlide(1);
+      }, 2000);
+
+      // Pause the animation on hover
+      const sliderContainer = document.querySelector('.slider-container');
+      sliderContainer.addEventListener('mouseover', () => {
+        clearInterval(autoSlideInterval);
+      });
+
+      sliderContainer.addEventListener('mouseout', () => {
+        autoSlideInterval = setInterval(() => {
+          moveSlide(1);
+        }, 2000);
+      });
+    });
+  </script>
+
+<header id="header" class="header fixed-top">
+  <div class="branding">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+              <img src="img/gprobo logo.png" class="nav-log" alt="">
+          </a>
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="./index.html" class="">Home</a></li>
+              <li><a href="./robo.html">Product</a></li>
+              <li class="dropdown">
+                <a href=""><span>Gallery</span><span class="arrow">&#9662;</span></a></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./images.html">Images</a></li>
+                    <li><a href="./gallery.html">Videos</a></li>
+  
+                </ul>
+              </li>           
+           </li>
+              <li><a href="careers.html">Career</a></li>
+              <li><a href="about.html">About Us </a></li>
+              <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+      </div>
+  </div>
+</header>
+ 
+</head>
+
+<body>
+<main id="main">
+   <!-- ======= Cta Section ======= -->
+   <section id="cta" class="cta">
+    <div class="container">
+  
+      <div class="text-center" data-aos="zoom-in">
+        <h3>Shaping the Future with Robotics : <span class="red-text">GPROBO</span></h3>
+        
+        <p style="text-align: justify;">
+          GPROBO is a cutting-edge robotics research and deployment company committed to transforming the future through advanced robotic solutions. Our organization is built on the foundation of relentless innovation and a vision to revolutionize how humans and robots interact in everyday environments. We are dedicated to crafting intelligent, versatile, and highly adaptable robotic systems that seamlessly integrate into both personal and industrial spaces, ultimately enhancing efficiency, safety, and the overall quality of life for people worldwide.
+
+          With a mission to develop general-purpose robots that can perform a diverse range of tasks, GPROBO places a strong emphasis on creating machines that are not only technologically advanced but also intuitive and reliable. Our robots are designed to think, learn, and adapt to their surroundings, providing unparalleled support and enabling seamless collaboration between humans and technology.
+          
+          Our team of world-class engineers, AI specialists, and robotics experts work tirelessly at the forefront of innovation. They combine their expertise in machine learning, computer vision, sensor integration, and human-robot interaction to push the boundaries of what robotics can achieve. By leveraging cutting-edge research and development, GPROBO delivers solutions that address complex, real-world challenges and drive meaningful advancements in robotics. </p>
+  
+    </div>
+  </section><!-- End Cta Section -->
+
+  <section id="cat" class="cat">
+    <div class="container">
+  
+      <div   class="text-center" data-aos="zoom-in">
+        <h3>Our vision for the future of Robotics</h3>
+        <p style="text-align: justify;">At GPROBO, we envision a future where robotics significantly enhances productivity and safety across various industries. Our mission is to develop versatile robots capable of performing a wide range of tasks, from healthcare and manufacturing to logistics and home assistance.
+
+          We aim to create intelligent machines that automate repetitive and time-consuming processes, allowing human workers to focus on more strategic and creative endeavors. By doing so, we will not only streamline operations and reduce errors but also help organizations cut costs and optimize resources.
+          
+          Safety is paramount, and our robots will take on high-risk tasks, such as handling hazardous materials and conducting inspections in dangerous environments, thus protecting human workers and reducing workplace injuries.
+          
+          Central to our vision is the concept of collaboration between humans and robots. </p>
+      </div>
+  
+    </div>
+  </section>
+
+  <section id="call-to-action" class="call-to-action section">
+
+
+      <img src="img/cert img3.png" alt="">
+
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>CERTIFICATE OF RECOGNITION</h3>
+              <p></p>
+              <a class="cta-btn" href="certificate.html">CERTIFICATES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  <section id="team" class="team section"> 
+    <div class="container section-title" data-aos="fade-up">
+      <span class="">Team</span>
+      <h2>Team</h2>
+     
+    </div>
+    
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="img/team/Ajay.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Ajay Maurya</h4>
+              <span>FOUNDER, CEO & CTO</span>
+              <p>
+                
+              </p>
+              <div class="social">
+                <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                <a href="https://www.linkedin.com/in/ajay-maurya-025b5019a/"><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="member">
+            <img src="img/team/abdul.jpeg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Abdul Rehman Shah</h4>
+              <span>Co-FOUNDER & COO</span>
+              <p>
+               
+              </p>
+              <div class="social">
+                <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="member">
+            <img src="img/team/Somesh.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Somesh Chaudhari</h4>
+              <span>Web Developer</span>
+              <p>
+                
+              </p>
+              <div class="social">
+                <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                <a href="https://www.linkedin.com/in/somesh-chaudhari-852715186/"><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="member">
+            <img src="img/team/Aditya.jpg" class="img-fluid" alt="">
+            <div class="member-content">
+              <h4>Aditya Bhoye</h4>
+              <span>Web Developer</span>
+              <p>
+                
+              </p>
+              <div class="social">
+                <a href="" ><i class="bi bi-twitter" style="color: rgb(98, 169, 202)"></i></a>
+                <a href=""><i class="bi bi-facebook" style="color: rgb( 24, 119, 242)"></i></a>
+                <a href=""><i class="bi bi-instagram" style="color: rgb( 193, 53, 132)"></i></a>
+                <a href=""><i class="bi bi-linkedin" style="color: rgb( 0, 119, 181)"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+ 
+</main>
+
+<footer id="footer" class="footer position-relative">
+
+  <div class="container footer-top text-center "> <!-- Added 'text-center' class to center-align main content -->
+    <div class="row gy-3 justify-content-center">
+      <div class="col-lg-4 col-md-6 ">
+        <div class="footer-about">
+          <a href="index.html" class="logo">GPROBO</a>
+          <div class="footer-contact pt-3">
+            <p>Room No.520, Bhaskarachraya Building</p>
+            <p>Somaiya Vidyavihar, Mumbai, 400077</p>
+            <p><i class="bi bi-telephone"></i> <strong>:</strong> <span>+91 8934935753</span></p>
+            <p><i class="bi bi-envelope"></i> <strong>:</strong> <span>gprobo.ai@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex justify-content-center mt-4"> <!-- Center-align social links -->
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/gprobo/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company.html">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="container text-center mt-4"> 
+    <p>© <span>Copyright 2024</span> <strong class="px-1">GPROBO</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by <a href="">GPROBO TEAM</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/php-email-form/validate.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="vendor/glightbox/js/glightbox.min.js"></script>
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+<!-- Main JS File -->
+<script src="js/main.js"></script>
+
+<div id="leave_msg_container">
+  <style>
+    #leave_msg_href {
+      width: 105px;
+      height: 105px;
+      display: block;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+      background-size: 100%;
+      right: 58px;
+      bottom: 30px;
+      z-index: 1000;
+    }
+    
+
+    #leave_msg_href_but {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      bottom: 0;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      border-radius: 15px;
+      background: linear-gradient(to right, #8a3737, #f71010);
+    }
+
+    @media (max-width: 576px) {
+      #leave_msg_href {
+        width: 90px;
+        height: 90px;
+        background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+        background-size: 100%;
+      }
+
+      #leave_msg_href_but {
+        height: 26px;
+        border-radius: 13px;
+        line-height: 26px;
+        font-size: 10px;
+      }
+    }
+  </style>
+        <div data-agl-cvt="1" onclick="qutoe_now_click()" id="leave_msg_href">
+    <div id="leave_msg_href_but" >CONTACT US</div>
+  </div>
+  
+</div>
+<script src="contact.js"></script>
+
+
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</body>
+</html>

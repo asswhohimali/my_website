@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/careers.css"> -->
+    <link rel="stylesheet" href="css/career_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="img/gprobo.jpeg" rel="icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Vendor CSS Files -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/about.css" rel="stylesheet">
+      
+       
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <title>Careers</title>
+</head>
+
+
+<body>
+  <header id="header" class="header fixed-top">
+    <div class="branding">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="img/gprobo logo.png" class="nav-log" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="./index.html" class="">Home</a></li>
+                <li><a href="./robo.html">Product</a></li>
+                <li class="dropdown">
+                  <a href=""><span>Gallery</span><span class="arrow">&#9662;</span></a></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="./images.html">Images</a></li>
+                      <li><a href="./gallery.html">Videos</a></li>
+    
+                  </ul>
+                </li>           
+             </li>
+                <li><a href="careers.html"><span>Career</span></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href=""><span>About Us </span><span class="arrow">&#9662;</span></a></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="./company.html">Company Info</a></li>
+                      <li><a href="./certificate.html">Certificate</a></li>
+                      <li><a href="./teams.html">Teams</a></li>
+    
+                  </ul>
+                </li>
+                <li><a href="contact_us.html">Contact us</a></li>
+              </ul>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </div>
+  </header>
+      
+    <div class="careers">
+        <h1>Build the Future of Artificial Intelligence</h1>
+
+        <form id="applicationForm" enctype="multipart/form-data" class="careers-form" action="/submitForm"
+            method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="exceptionalWork" class="form-label">Exceptional Work (Software, Hardware, AI):</label>
+                <textarea class="form-control" id="exceptionalWork" name="exceptionalWork" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Id:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactNo" class="form-label">Contact No.:</label>
+                <input type="tel" class="form-control" id="contactNo" name="contactNo" pattern="[0-9]{10}" required>
+            </div>
+            <div class="mb-3">
+                <label for="collegeName" class="form-label">College Name:</label>
+                <input type="text" class="form-control" id="collegeName" name="collegeName" required>
+            </div>
+            <div class="mb-3">
+              <label for="roleCategory" class="form-label">Role Category:</label>
+              <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton">
+                      Select Role Category
+                  </button>
+                  <ul class="dropdown-menu" id="roleCategoryDropdown">
+                      <!-- Checkboxes will be added here dynamically -->
+                  </ul>
+              </div>
+          </div>
+          
+            <div class="mb-3">
+                <label for="yearOfPassing" class="form-label">Year of Passing:</label>
+                <input type="text" class="form-control" id="yearOfPassing" name="yearOfPassing" required>
+            </div>
+            <div class="mb-3">
+                <label for="resume" class="form-label">Resume:</label>
+                <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch('/submitForm', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        alert('Form submitted successfully! Our team will connect with you shortly.');
+                        // Redirect to the same page
+                        window.location.href = window.location.href;
+                    } else {
+                        // Handle other status codes, such as 400 (Bad Request)
+                        return response.json(); // Parse response body as JSON
+                    }
+                })
+                .then(data => {
+                    // If the response contains an error message, show it in an alert box
+                    if (data && data.error) {
+                        alert(data.error);
+                    }
+                })
+                .catch(error => {
+                    // Show error message
+                    alert('Error submitting form. Please try again later.');
+                });
+        });
+    </script>
+
+    <script src="js/index.js"></script>
+    <footer id="footer" class="footer position-relative">
+
+        <div class="container footer-top text-center "> <!-- Added 'text-center' class to center-align main content -->
+          <div class="row gy-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 ">
+              <div class="footer-about">
+                <a href="index.html" class="logo">GPROBO</a>
+                <div class="footer-contact pt-3">
+                  <p>Room No.520, Bhaskarachraya Building</p>
+                  <p>Somaiya Vidyavihar, Mumbai, 400077</p>
+                  <p><i class="bi bi-telephone"></i> <strong>:</strong> <span>+91 8934935753</span></p>
+                  <p><i class="bi bi-envelope"></i> <strong>:</strong> <span>gprobo.ai@gmail.com</span></p>
+                </div>
+                <div class="social-links d-flex justify-content-center mt-4"> <!-- Center-align social links -->
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/gprobo/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="container text-center mt-4"> 
+          <p>© <span>Copyright 2024</span> <strong class="px-1">GPROBO</strong> <span>All Rights Reserved</span></p>
+          <div class="credits">
+            Designed by <a href="">GPROBO TEAM</a>
+          </div>
+        </div>
+      
+      </footer>
+
+
+      <div id="leave_msg_container">
+        <style>
+          #leave_msg_href {
+            width: 105px;
+            height: 105px;
+            display: block;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+            background-size: 100%;
+            right: 58px;
+            bottom: 30px;
+            z-index: 1000;
+          }
+          
+      
+          #leave_msg_href_but {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            bottom: 0;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            border-radius: 15px;
+            background: linear-gradient(to right, #8a3737, #f71010);
+          }
+      
+          @media (max-width: 576px) {
+            #leave_msg_href {
+              width: 90px;
+              height: 90px;
+              background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+              background-size: 100%;
+            }
+      
+            #leave_msg_href_but {
+              height: 26px;
+              border-radius: 13px;
+              line-height: 26px;
+              font-size: 10px;
+            }
+          }
+        </style>
+              <div data-agl-cvt="1" onclick="qutoe_now_click()" id="leave_msg_href">
+          <div id="leave_msg_href_but" >CONTACT US</div>
+        </div>
+        
+      </div>
+
+      <script src="js/main.js"></script>
+
+</body>
+
+</html>

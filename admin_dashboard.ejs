@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/admin_dashboard.css">
+</head>
+
+<body>
+
+    <!-- <div id="navbar"></div> -->
+
+    <div class="containers">
+        <button class="logout-button" onclick="logout()">Logout</button>
+        <h1>Admin Dashboard</h1>
+        <input type="text" id="searchInput" placeholder="Search by Name" oninput="filterData()">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact No.</th>
+                    <th>College Name</th>
+                    <th>Year of Passing</th>
+                    <th>Role Category</th>
+                    <th>Exceptional Work</th>
+                    <th>Resume</th>
+                    <!-- <th>Action</th> -->
+                </tr>
+            </thead>
+            <tbody id="formData">
+                <!-- Form data will be dynamically inserted here -->
+                <% formData.forEach(application=> { %>
+                    <tr>
+                        <td style="white-space: nowrap;">
+                            <%= application.name %>
+                        </td>
+                        <td style="white-space: nowrap;">
+                            <%= application.email %>
+                        </td>
+                        <td style="white-space: nowrap;">
+                            <%= application.contactNo %>
+                        </td>
+                        <td>
+                            <%= application.collegeName %>
+                        </td>
+                        <td>
+                            <%= application.yearOfPassing %>
+                        </td>
+                        <td>
+                            <%= application.roleCategory.join(', ') %></td>
+                        <td><%= application.exceptionalWork %></td>
+                        <td><a href="/uploads/<%= application.resume %>" target="_blank"><%= application.resume %></a></td>
+                        <!-- <td><img width="32" height="32" src="https://img.icons8.com/fluency/48/filled-trash.png"
+                                alt="filled-trash" class="delete-icon"
+                                onclick="deleteRecord(' <%=application.email %>')" />
+                        </td> -->
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <!-- <button class="logout-button" onclick="logout()">Logout</button> -->
+    </div>
+
+    <!-- <div id="footer"></div> -->
+
+    <script>
+        function filterData() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don' t match the search query 
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; if (td) {
+                    txtValue = td.textContent ||
+                        td.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+        function logout() {
+            // Redirect to admin login page
+            window.location.href = "/admin_login.html";
+        }
+
+        // async function deleteRecord(email) {
+        //     if (confirm("Are you sure you want to delete this record?")) {
+        //         try {
+        //             const response = await fetch(`/deleteRecord/${email}`, {
+        //                 method: 'DELETE'
+        //             });
+        //             if (response.ok) {
+        //                 // If deletion successful, remove the row from the table
+        //                 const row = document.getElementById('row_' + email);
+        //                 if (row) {
+        //                     row.remove();
+        //                 } else {
+        //                     console.error('Row element not found');
+        //                 }
+        //             } else {
+        //                 console.error('Failed to delete record');
+        //             }
+        //         } catch (error) {
+        //             console.error('Error:', error);
+        //         }
+        //     }
+        // }
+
+    </script>
+
+    <!-- <script src="./js/admin_dashboard.js"></script> -->
+
+
+    <!-- <script src="js/index.js"></script> -->
+
+</body>
+
+</html>

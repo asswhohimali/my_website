@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>GPROBO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" href="img/gprobo.jpeg">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/main.js"></script>
+
+  <!-- =======================================================
+  * Template Name: Day
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Updated: Mar 19 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      margin: auto;
+      padding-top: 0px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+      color:black;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Adds space between the images */
+      margin-bottom: 100px; /* Added margin-bottom for spacing */
+    }
+
+    .image {
+      flex: 1 1 calc(33.333% - 20px); /* Adjust this value to change the number of images per row */
+      max-width: calc(33.333% - 20px); /* Adjust this value to change the number of images per row */
+    }
+
+    .image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 600px;
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      position: relative; /* Added position relative */
+    }
+
+    .video-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .video-thumbnail {
+      position: relative; /* Added position relative */
+    }
+
+    .video-thumbnail img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 64px;
+      color: rgba(255, 255, 255, 0.8);
+      transition: color 0.3s, opacity 0.3s;
+      opacity: 0.6; /* Lower opacity by default */
+    }
+
+    .video-container:hover .play-button {
+      color: rgba(255, 255, 255, 1);
+      opacity: 1; /* Full opacity on hover */
+    }
+
+    .video-container p {
+      margin: 10px 0 0;
+      color: rgb(0, 0, 0);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+    <header id="header" class="header fixed-top">
+        <div class="branding">
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="img/gprobo logo.png" class="nav-log" alt="">
+                </a>
+                <nav id="navmenu" class="navmenu">
+                  <ul>
+                    <li><a href="./index.html" class="">Home</a></li>
+                    <li><a href="./robo.html">Product</a></li>
+                    <li class="dropdown">
+                      <a href=""><span>Gallery</span><span class="arrow">&#9662;</span></a></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="./images.html">Images</a></li>
+                          <li><a href="./gallery.html">Videos</a></li>
+        
+                      </ul>
+                    </li>           
+                 </li>
+                    <li><a href="careers.html"><span>Career</span></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href=""><span>About Us </span><span class="arrow">&#9662;</span></a></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="./company.html">Company Info</a></li>
+                          <li><a href="./certificate.html">Certificate</a></li>
+                          <li><a href="./teams.html">Teams</a></li>
+        
+                      </ul>
+                    </li>
+                    <li><a href="contact_us.html">Contact us</a></li>
+                  </ul>
+                  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+            </div>
+        </div>
+      </header>
+  
+  <div class="container" style="padding-top: 70px;">
+    <h1>IMAGES</h1>
+    <div class="gallery">
+      <div class="image">
+        <img src="img/media.jpg" alt="Image 1">
+      </div>
+      <div class="image">
+        <img src="img/media 1.jpg" alt="Image 2">
+      </div>
+      <div class="image">
+        <img src="img/image.jpg" alt="Image 3">
+      </div>
+      <div class="image">
+        <img src="img/I 1.jpg" alt="Image 4">
+      </div>
+      <div class="image">
+        <img src="img/i 2.jpg" alt="Image 5">
+      </div>
+      <div class="image">
+        <img src="img/I 5.jpg" alt="Image 6">
+      </div>
+      <div class="image">
+        <img src="img/i 4.jpg" alt="Image 7">
+      </div>
+      <div class="image">
+        <img src="img/I 6.jpg" alt="Image 8">
+      </div>
+      <div class="image">
+        <img src="img/i 3.jpg" alt="Image 9">
+      </div>
+    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll(".image img");
+      images.forEach(img => {
+        img.onload = function() {
+          const aspectRatio = img.naturalWidth / img.naturalHeight;
+          if (aspectRatio > 1) {
+            img.style.width = '100%';
+            img.style.height = 'auto';
+          } else {
+            img.style.width = 'auto';
+            img.style.height = '100%';
+          }
+        }
+      });
+    });
+  </script>
+
+
+</main>
+
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/php-email-form/validate.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="vendor/glightbox/js/glightbox.min.js"></script>
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+<!-- Main JS File -->
+<script src="js/main.js"></script>
+
+<div id="leave_msg_container">
+<style>
+  #leave_msg_href {
+    width: 105px;
+    height: 105px;
+    display: block;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+    background-size: 100%;
+    right: 58px;
+    bottom: 30px;
+    z-index: 1000;
+  }
+  
+
+  #leave_msg_href_but {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    bottom: 0;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(to right, #8a3737, #f71010);
+  }
+
+  @media (max-width: 576px) {
+    #leave_msg_href {
+      width: 90px;
+      height: 90px;
+      background: url(static/demo/img/pom-bot-creatives.gif) no-repeat;
+      background-size: 100%;
+    }
+
+    #leave_msg_href_but {
+      height: 26px;
+      border-radius: 13px;
+      line-height: 26px;
+      font-size: 10px;
+    }
+  }
+</style>
+      <div data-agl-cvt="1" onclick="qutoe_now_click()" id="leave_msg_href">
+  <div id="leave_msg_href_but" >CONTACT US</div>
+</div>
+
+</div>
+<script src="contact.js"></script>
+
+</body>
+
+</html>
